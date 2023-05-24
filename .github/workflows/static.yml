@@ -32,7 +32,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - run: npm i markdown-to-html-cli -g
-      - run: markdown-to-html --dark-mode auto --source README.md --output index.html --github-corner "https://github.com/regenhardt/markdown-pages-test"
+      - run: markdown-to-html --source README.md --output index.html --github-corner "https://github.com/regenhardt"
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
