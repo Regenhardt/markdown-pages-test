@@ -31,15 +31,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Converts Markdown to HTML
-        uses: jaywcjlove/markdown-to-html-cli@main
-        with:
-          source: ./README.md
-          output: index.html
-          dark-mode: auto
-          markdown-style-theme: dark
-          markdown-style: "max-width: 1260px"
-          github-corners: https://github.com/regenhardt/markdown-pages-test
+      - run: npm i markdown-to-html-cli -g
+      - run: markdown-to-html --dark-mode auto --source README.md --output index.html --github-corner "https://github.com/regenhardt/markdown-pages-test"
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
