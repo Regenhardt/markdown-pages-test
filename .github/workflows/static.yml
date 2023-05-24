@@ -29,6 +29,15 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
+      - name: Converts Markdown to HTML
+        uses: jaywcjlove/markdown-to-html-cli@main
+        with:
+          source: README.md
+          output: index.html
+          dark-mode: auto
+          markdown-style-theme: dark
+          markdown-style: "max-width: 1260px"
+          github-corners: https://github.com/regenhardt/markdown-pages-test
       - name: Checkout
         uses: actions/checkout@v3
       - name: Setup Pages
