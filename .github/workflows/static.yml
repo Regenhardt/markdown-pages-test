@@ -32,7 +32,7 @@ jobs:
       - name: Converts Markdown to HTML
         uses: jaywcjlove/markdown-to-html-cli@main
         with:
-          source: README.md
+          source: ./README.md
           output: index.html
           dark-mode: auto
           markdown-style-theme: dark
